@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniLife: Campus Walk</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>UniLife: Campus Walk</h1>
+        <p>Plan class, cash, rest, friends, and optional campus life.</p>
+      </div>
+      <div class="new-game-box">
+        <input id="usernameInput" placeholder="username" value="test_player" />
+        <input id="passwordInput" placeholder="password" type="password" value="123456" />
+        <input id="displayNameInput" placeholder="display name" value="Test Player" />
+        <button id="registerBtn">Register</button>
+        <button id="loginBtn" class="secondary">Login</button>
+        <button id="newGameBtn" class="secondary" disabled>New Save</button>
+      </div>
+    </header>
+
+    <section class="map-card">
+      <div class="section-title">
+        <span>Campus Map</span>
+        <small>Click unlocked locations to move. Required markers only show for the current time slot.</small>
+      </div>
+      <canvas id="mapCanvas" width="1400" height="814"></canvas>
+      <div class="legend">
+        <span><i class="dot unlocked"></i>Unlocked</span>
+        <span><i class="dot locked"></i>Locked</span>
+        <span><i class="dot player"></i>Player</span>
+        <span><i class="dot npc"></i>NPC</span>
+        <span><i class="pill req"></i>Current required task</span>
+      </div>
+    </section>
+
+    <main class="dashboard-grid">
+      <section class="card status-card">
+        <div class="section-title"><span>Player Status</span><small id="saveLabel">No save</small></div>
+        <div id="statusGrid" class="status-grid empty">Click New Game to start.</div>
+        <button id="endDayBtn" class="wide danger" disabled>Sleep / End Day</button>
+      </section>
+
+      <section class="card event-card">
+        <div class="section-title"><span>Current Event</span><small>one required max</small></div>
+        <div id="eventSummary" class="place-summary empty">No event loaded.</div>
+      </section>
+
+      <section class="card">
+        <div class="section-title"><span>Activities Here</span><small>required / optional / earn</small></div>
+        <div id="activityList" class="list empty">No game loaded.</div>
+      </section>
+
+      <section class="card place-card">
+        <div class="section-title"><span>Current Place</span><small>local tasks only</small></div>
+        <div id="placeSummary" class="place-summary empty">Move to a location to see local actions.</div>
+      </section>
+
+      <section class="card">
+        <div class="section-title"><span>NPCs Here</span><small>current location only</small></div>
+        <div id="npcList" class="list empty">No game loaded.</div>
+      </section>
+    </main>
+
+    <section class="bottom-grid">
+      <div class="card">
+        <div class="section-title"><span>Story Leads</span><small>NPC routes</small></div>
+        <div id="storyList" class="story-list empty">No story leads yet.</div>
+      </div>
+      <div class="card">
+        <div class="section-title"><span>Action Records</span><small>ACTION_RECORD</small></div>
+        <div id="actionLog" class="history empty">No records yet.</div>
+      </div>
+      <div class="card">
+        <div class="section-title"><span>Day Logs & Ending</span><small>daily consequences</small></div>
+        <div id="dayLog" class="history empty">No daily summary yet.</div>
+      </div>
+    </section>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
