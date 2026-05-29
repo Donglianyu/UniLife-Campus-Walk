@@ -1,90 +1,85 @@
-# Quick Start
+# 🎓 UniLife Campus Walk
+
+> A full-stack campus life simulation web application powered by **Node.js**, **Express**, and **MySQL**.
+
+---
+
+## 🚀 Quick Start
 
 ```bash
 cd backend
 npm install
 npm start
+```
 
-# UniLife Campus Walk
+Then open:
 
-A web-based interactive campus life simulation game integrated with a MySQL database system.
-This project was developed as a database application project demonstrating full-stack development, database integration, and interactive user interface design.
+```text
+http://127.0.0.1:3002/
+```
 
 ---
 
-# Project Overview
+# 📖 Project Overview
 
-UniLife Campus Walk is an interactive web application that simulates campus activities, student events, mini-games, and social interactions within a university environment.
+UniLife Campus Walk is an interactive web-based campus simulation game designed as a database application project.
 
-The system combines:
+The project demonstrates:
 
-* Frontend web interface
-* Backend server using Node.js and Express
-* MySQL relational database
+* Full-stack web development
+* MySQL database integration
 * RESTful API communication
-* Persistent game and user data storage
+* Persistent data management
+* Interactive browser-based gameplay
 
-The project demonstrates practical database application development with real database connectivity and dynamic data interaction.
+Players can explore a virtual campus environment, participate in activities, trigger events, and interact with dynamic game systems.
 
 ---
 
+# ✨ Features
 
-# Features
+## 🖥 Interactive Web Interface
 
-## Interactive Web Interface
+* Browser-based gameplay
+* Dynamic campus navigation
+* Interactive event system
+* Responsive UI interactions
 
-* Browser-based user interface
-* Dynamic game interactions
-* Campus navigation system
-* Event and activity simulation
-
-## Database Integration
+## 🗄 Database Integration
 
 * MySQL relational database
-* Persistent user/game data storage
-* SQL procedures and structured schema
-* Multiple database tables with constraints
+* Persistent user/game data
+* Structured SQL schema
+* Stored procedures and constraints
 
-## Backend System
+## ⚙ Backend System
 
 * Node.js + Express server
-* RESTful API endpoints
-* Database query handling
-* Server-side logic processing
+* RESTful API architecture
+* Database query management
+* Server-side game logic
 
-## Additional Functionalities
+## 🎮 Additional Functionalities
 
-* User registration system
+* User registration
 * Event scheduling
-* Game state management
-* Health/API status checking
+* Save/load game states
+* Health check APIs
 
 ---
 
-# Technology Stack
+# 🛠 Technology Stack
 
-## Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-
-## Backend
-
-* Node.js
-* Express.js
-
-## Database
-
-* MySQL 8.0
-
-## Database Driver
-
-* mysql2
+| Layer    | Technology              |
+| -------- | ----------------------- |
+| Frontend | HTML5, CSS3, JavaScript |
+| Backend  | Node.js, Express.js     |
+| Database | MySQL 8.0               |
+| Driver   | mysql2                  |
 
 ---
 
-# Project Structure
+# 📂 Project Structure
 
 ```text
 Unilife/
@@ -98,6 +93,7 @@ Unilife/
 │   ├── server.js
 │   ├── db.js
 │   ├── package.json
+│   ├── package-lock.json
 │   └── .env.example
 │
 ├── database/
@@ -105,16 +101,17 @@ Unilife/
 │   ├── enhanced_event_schedule.sql
 │   └── latest_game_content_patch.sql
 │
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-# Database Setup
+# 🗄 Database Setup
 
-## Step 1: Install MySQL
+## 1️⃣ Install MySQL
 
-Install MySQL 8.0 or a compatible version.
+Install MySQL 8.0 or any compatible version.
 
 Official website:
 
@@ -122,17 +119,17 @@ https://www.mysql.com/
 
 ---
 
-## Step 2: Create the Database
+## 2️⃣ Create the Database
 
 Import the main SQL file:
 
-```sql
-database/unilife_campus_walk_uic_map.sql
+```bash
+mysql -u root -p < database/unilife_campus_walk_uic_map.sql
 ```
 
-Then apply additional patches:
+Then apply additional SQL patches:
 
-```sql
+```text
 database/enhanced_event_schedule.sql
 database/latest_game_content_patch.sql
 ```
@@ -141,17 +138,11 @@ You may use:
 
 * MySQL Workbench
 * phpMyAdmin
-* Command Line MySQL Client
-
-Example command:
-
-```bash
-mysql -u root -p < database/unilife_campus_walk_uic_map.sql
-```
+* MySQL Command Line Client
 
 ---
 
-# Environment Configuration
+# ⚙ Environment Configuration
 
 Create a `.env` file inside the `backend/` directory.
 
@@ -167,9 +158,7 @@ PORT=3002
 
 ---
 
-# Installation
-
-## Step 1: Install Dependencies
+# 📦 Installation
 
 Navigate to the backend folder:
 
@@ -177,7 +166,7 @@ Navigate to the backend folder:
 cd backend
 ```
 
-Install required packages:
+Install required dependencies:
 
 ```bash
 npm install
@@ -185,7 +174,7 @@ npm install
 
 ---
 
-# Running the Application
+# ▶ Running the Application
 
 Start the backend server:
 
@@ -193,7 +182,7 @@ Start the backend server:
 npm start
 ```
 
-or
+or:
 
 ```bash
 node server.js
@@ -201,9 +190,9 @@ node server.js
 
 ---
 
-# Access the Application
+# 🌐 Access the Application
 
-Open your browser and visit:
+Open your browser:
 
 ```text
 http://127.0.0.1:3002/
@@ -211,31 +200,31 @@ http://127.0.0.1:3002/
 
 ---
 
-# API Examples
+# 🔌 API Examples
 
 ## Health Check
 
-```text
+```http
 GET /api/health
 ```
 
 ## Create New Game
 
-```text
+```http
 POST /api/new-game
 ```
 
 ## User Registration
 
-```text
+```http
 POST /api/register
 ```
 
 ---
 
-# Database Design
+# 🧩 Database Design
 
-The project uses a relational database design including:
+The relational database system includes:
 
 * User tables
 * Event tables
@@ -249,23 +238,23 @@ The database supports persistent storage and dynamic retrieval of gameplay infor
 
 ---
 
-# Learning Objectives Demonstrated
+# 🎯 Learning Objectives Demonstrated
 
 This project demonstrates:
 
 * Database schema design
 * SQL implementation
-* Backend and database connectivity
-* Full-stack web application development
+* Backend-database connectivity
 * REST API development
+* Full-stack web application architecture
 * Interactive UI implementation
-* Data persistence and management
+* Persistent data management
 
 ---
 
-# Future Improvements
+# 🚧 Future Improvements
 
-Possible future extensions include:
+Potential future extensions include:
 
 * Multiplayer support
 * Authentication system
@@ -275,12 +264,12 @@ Possible future extensions include:
 
 ---
 
-# Authors
+# 👨‍💻 Authors
 
 Developed as a university database application project.
 
 ---
 
-# License
+# 📄 License
 
 This project is for educational purposes only.
